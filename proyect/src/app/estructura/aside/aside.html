@@ -1,0 +1,80 @@
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo - AQUÍ VA EL LOGO****-->
+    <a [routerLink]="['/dashboard']" class="brand-link">
+      <img src="/assets/dist/img/libro.png" alt="libro" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Book Store</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) - AL HACER EL LOGIN AQUÍ SALDRÁ EL NOMBRE DEL USUARIO-->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="#" class="d-block">{{ nombreUsuario }}</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               
+
+               <li class="nav-item">
+              <a [routerLink]="['/dashboard']" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/producto']" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Productos
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/cliente']" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Clientes
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+              <a [routerLink]="['/categoria']" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Categoria
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/pedido']" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Compras
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/venta']" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Ventas
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

@@ -1,0 +1,83 @@
+<div class="container my-4">
+  <h2 class="mb-4 text-primary">Gestión de Clientes</h2>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <form class="row g-3 align-items-end">
+        <div class="col-md-3">
+          <label class="form-label">Nombre</label>
+          <input [(ngModel)]="nuevoCliente.nombre" name="nombre" class="form-control" placeholder="Nombre" />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Apellido</label>
+          <input [(ngModel)]="nuevoCliente.apellido" name="apellido" class="form-control" placeholder="Apellido" />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Teléfono</label>
+          <input [(ngModel)]="nuevoCliente.telefono" name="telefono" class="form-control" placeholder="Teléfono" />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Correo</label>
+          <input [(ngModel)]="nuevoCliente.correo" name="correo" class="form-control" placeholder="Correo" />
+        </div>
+        <div class="col-md-12 text-end">
+          <button type="button" class="btn btn-success px-4" (click)="guardarCliente()" title="Guardar Cliente">
+            <i class="bi bi-person-plus-fill me-1"></i> Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>
+            <span *ngIf="clienteEditando?.id_cliente !== cliente.id_cliente">{{ cliente.nombre }}</span>
+            <input *ngIf="clienteEditando?.id_cliente === cliente.id_cliente" [(ngModel)]="clienteEditando.nombre" class="form-control form-control-sm" />
+          </td>
+          <td>
+            <span *ngIf="clienteEditando?.id_cliente !== cliente.id_cliente">{{ cliente.apellido }}</span>
+            <input *ngIf="clienteEditando?.id_cliente === cliente.id_cliente" [(ngModel)]="clienteEditando.apellido" class="form-control form-control-sm" />
+          </td>
+          <td>
+            <span *ngIf="clienteEditando?.id_cliente !== cliente.id_cliente">{{ cliente.telefono }}</span>
+            <input *ngIf="clienteEditando?.id_cliente === cliente.id_cliente" [(ngModel)]="clienteEditando.telefono" class="form-control form-control-sm" />
+          </td>
+          <td>
+            <span *ngIf="clienteEditando?.id_cliente !== cliente.id_cliente">{{ cliente.correo }}</span>
+            <input *ngIf="clienteEditando?.id_cliente === cliente.id_cliente" [(ngModel)]="clienteEditando.correo" class="form-control form-control-sm" />
+          </td>
+          <td>
+            <div *ngIf="clienteEditando?.id_cliente !== cliente.id_cliente">
+              <button class="btn btn-sm btn-warning me-1" (click)="editarCliente(cliente)" title="Editar">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="eliminarCliente(cliente.id_cliente)" title="Eliminar">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div>
+            <div *ngIf="clienteEditando?.id_cliente === cliente.id_cliente">
+              <button class="btn btn-sm btn-success me-1" (click)="guardarEdicion()" title="Guardar">
+                <i class="bi bi-check-lg"></i>
+              </button>
+              <button class="btn btn-sm btn-secondary" (click)="cancelarEdicion()" title="Cancelar">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

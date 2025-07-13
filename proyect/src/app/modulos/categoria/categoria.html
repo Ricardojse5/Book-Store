@@ -1,0 +1,56 @@
+<div class="container my-4">
+  <h2 class="mb-4 text-primary">Gestión de Categorías</h2>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <form class="row g-3 align-items-end">
+        <div class="col-md-10">
+          <label class="form-label">Nombre de Categoría</label>
+          <input [(ngModel)]="nuevaCategoria.nombre" name="nombre" class="form-control" placeholder="Ej: Tecnología" />
+        </div>
+        <div class="col-md-2 text-end">
+          <button type="button" class="btn btn-success mt-4" (click)="guardarCategoria()" title="Guardar Categoría">
+            <i class="bi bi-tags-fill me-1"></i> Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of categoria">
+          <td>
+            <span *ngIf="categoriaEditando?.id_categoria !== item.id_categoria">{{ item.nombre }}</span>
+            <input *ngIf="categoriaEditando?.id_categoria === item.id_categoria" [(ngModel)]="categoriaEditando.nombre" class="form-control form-control-sm" />
+          </td>
+          <td>
+            <div *ngIf="categoriaEditando?.id_categoria !== item.id_categoria">
+              <button class="btn btn-sm btn-warning me-1" (click)="editarCategoria(item)" title="Editar">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="eliminarCategoria(item.id_categoria)" title="Eliminar">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div>
+            <div *ngIf="categoriaEditando?.id_categoria === item.id_categoria">
+              <button class="btn btn-sm btn-success me-1" (click)="guardarEdicion()" title="Guardar">
+                <i class="bi bi-check-lg"></i>
+              </button>
+              <button class="btn btn-sm btn-secondary" (click)="cancelarEdicion()" title="Cancelar">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
