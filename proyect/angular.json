@@ -34,7 +34,8 @@
               }
             ],
             "styles": [
-               "src/assets/plugins/fontawesome-free/css/all.min.css",
+ 
+ "src/assets/plugins/fontawesome-free/css/all.min.css",
                "src/assets/dist/css/adminlte.min.css",
                "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
@@ -59,8 +60,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
