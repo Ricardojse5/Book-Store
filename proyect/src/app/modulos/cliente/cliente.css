@@ -1,6 +1,4 @@
 :host {
-  background-image: url('/assets/img/clieneimg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-color: red !important;
   min-height: 100vh;
 }
