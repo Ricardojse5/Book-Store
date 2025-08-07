@@ -1,10 +1,14 @@
 <?php
+
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 header('Access-Control-Allow-Headers: Content-Type');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 
 require_once("../conexion.php"); // Ajusta la ruta si es necesario
 
