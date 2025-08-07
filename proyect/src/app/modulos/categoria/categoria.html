@@ -25,32 +25,7 @@
           <th>Acciones</th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let item of categoria">
-          <td>
-            <span *ngIf="categoriaEditando?.id_categoria !== item.id_categoria">{{ item.nombre }}</span>
-            <input *ngIf="categoriaEditando?.id_categoria === item.id_categoria" [(ngModel)]="categoriaEditando.nombre" class="form-control form-control-sm" />
-          </td>
-          <td>
-            <div *ngIf="categoriaEditando?.id_categoria !== item.id_categoria">
-              <button class="btn btn-sm btn-warning me-1" (click)="editarCategoria(item)" title="Editar">
-                <i class="bi bi-pencil-fill"></i>
-              </button>
-              <button class="btn btn-sm btn-danger" (click)="eliminarCategoria(item.id_categoria)" title="Eliminar">
-                <i class="bi bi-trash-fill"></i>
-              </button>
-            </div>
-            <div *ngIf="categoriaEditando?.id_categoria === item.id_categoria">
-              <button class="btn btn-sm btn-success me-1" (click)="guardarEdicion()" title="Guardar">
-                <i class="bi bi-check-lg"></i>
-              </button>
-              <button class="btn btn-sm btn-secondary" (click)="cancelarEdicion()" title="Cancelar">
-                <i class="bi bi-x-lg"></i>
-              </button>
-            </div>
-          </td>
-        </tr>
-      </tbody>
+      
     </table>
   </div>
 </div>
