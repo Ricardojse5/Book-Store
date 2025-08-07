@@ -1,24 +1,20 @@
 <?php
 /*
-    $servidor = "localhost";
-    $usuario = "root";
-    $clave = "";
-    $bd = "general";
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+$bd = "general";
 
-    $conexion = mysqli_connect($servidor, $usuario, $clave) or die ('No encontró el servidor');
-    mysqli_select_db($conexion, $bd) or die ('No encontró la base de datos  ');
-    mysqli_set_charset($conexion,"utf8");
-    //echo "se conecto"
- */
-
-    <?php
-/*
-Código anterior comentado...
+$conexion = mysqli_connect($servidor, $usuario, $clave) or die ('No encontró el servidor');
+mysqli_select_db($conexion, $bd) or die ('No encontró la base de datos');
+mysqli_set_charset($conexion, "utf8");
+//echo "se conecto"
 */
 
+// --- Conexión activa para InfinityFree ---
 $servidor = "sql112.infinityfree.com";
 $usuario = "if0_39626355";
-$clave = "HshfWNpq7iT9";
+$clave = "HshfNWpq7iT9";
 $bd = "if0_39626355_bookstore";
 
 $conexion = mysqli_connect($servidor, $usuario, $clave, $bd)
@@ -26,5 +22,3 @@ $conexion = mysqli_connect($servidor, $usuario, $clave, $bd)
 
 mysqli_set_charset($conexion, "utf8");
 ?>
-
-    ?>
