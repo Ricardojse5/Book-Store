@@ -14,8 +14,8 @@ mysqli_set_charset($conexion, "utf8");
 // --- Conexión activa para InfinityFree ---
 $servidor = "sql112.infinityfree.com";
 $usuario = "if0_39626355";
-$clave = "HshfNWpq7iT9";
-$bd = "if0_39626355_bookstore";
+$clave = "HshfWNpq7iT9";
+$bd = "if0_39626355_XXX";  // ← REEMPLAZA esto con el nombre real exacto de tu base de datos
 
 $conexion = mysqli_connect($servidor, $usuario, $clave, $bd)
     or die ('No encontró el servidor o la base de datos');
