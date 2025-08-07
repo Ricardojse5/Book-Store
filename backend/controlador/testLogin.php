@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: text/plain");
 
 // Incluir conexión a la base de datos
-include("../conexion.php");  // <<--- AQUÍ VA
+include("../modelos/conexion.php");
 
 // Consulta de prueba
 $query = "SELECT * FROM usuario LIMIT 1";
