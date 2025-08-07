@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private url = 'http://localhost/Proyecto/backend/controlador/controlador_usuario.php';
+  //private url = 'http://localhost/Proyecto/backend/controlador/controlador_usuario.php';
+url = 'https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_cliente.php';
 
 constructor(private http: HttpClient) { }
 

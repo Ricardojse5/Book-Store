@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClienteService {
-  url = 'http://localhost/Proyecto/backend/controlador/controlador_cliente.php';
+  //url = 'http://localhost/Proyecto/backend/controlador/controlador_cliente.php';
+  url = 'https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_cliente.php';
+
 
   constructor(private http: HttpClient) { }
 

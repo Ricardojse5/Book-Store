@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoriaService {
-  private url = 'http://localhost/Proyecto/backend/controlador/controlador_categoria.php';
+  //private url = 'http://localhost/Proyecto/backend/controlador/controlador_categoria.php';
+url = 'https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_cliente.php';
 
   constructor(private http: HttpClient) {}
 
