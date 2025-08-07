@@ -18,7 +18,7 @@ Código anterior comentado...
 
 $servidor = "sql112.infinityfree.com";
 $usuario = "if0_39626355";
-$clave = "TU_PASSWORD_DEL_PANEL";
+$clave = "HshfWNpq7iT9";
 $bd = "if0_39626355_bookstore";
 
 $conexion = mysqli_connect($servidor, $usuario, $clave, $bd)
