@@ -7,8 +7,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductoService {
-  //url = 'http://localhost/Proyecto/backend/controlador/controlador_producto.php';
-url = 'https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_cliente.php';
+  url = 'http://localhost/Proyecto/backend/controlador/controlador_producto.php';
+//url = 'https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_cliente.php';
 
   constructor(private http: HttpClient) { }
 
