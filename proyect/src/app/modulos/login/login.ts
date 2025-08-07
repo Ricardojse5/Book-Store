@@ -19,8 +19,8 @@ export class Login {
   constructor(private http: HttpClient, private router: Router) {}
 
   login() {
-  this.http.post<any>('http://localhost/Proyecto/backend/controlador/controlador_usuario.php?control=login', {
-    //this.http.post<any>('https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_usuario.php?control=login', {
+  //this.http.post<any>('http://localhost/Proyecto/backend/controlador/controlador_usuario.php?control=login', {
+    this.http.post<any>('https://bookstoreappback.infinityfreeapp.com/backend/controlador/controlador_usuario.php?control=login', {
     user: this.credenciales.user,
     password: this.credenciales.password
   }).subscribe({
